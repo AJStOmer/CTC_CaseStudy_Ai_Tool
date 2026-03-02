@@ -49,8 +49,11 @@ st.markdown("""
 <div style='background-color:#f5f7fa; padding:15px; border-radius:8px; line-height:1.6;'>
 This AI tool was created to support the analytics portion of this case study.
 
+Originally, I planned to build a RAG chatbot using Azure OpenAI and embed it into the Power BI dashboard, 
+but due to limitations with student accounts, I implemented this alternative solution to showcase the concept and functionality.
+            
 It works by sending your question to an LLM hosted by Groq, along with the dataset’s column names and data types.  
-The model generates a SQL query, which is executed against the dataset to compute the answer.
+The model generates an SQL query, which is executed against the dataset to compute the answer.
 
 <b>Note:</b> Responses may not always be perfect. For best results, ask clear and specific questions.
 </div>
