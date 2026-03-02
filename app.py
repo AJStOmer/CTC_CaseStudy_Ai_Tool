@@ -3,9 +3,15 @@ import streamlit as st
 import pandas as pd
 from groq import Groq
 import duckdb
+import os
+
+
 
 #load Groq llm
-client = Groq(api_key=st.secrets["GROQ_API_KEY"])
+#client = Groq(api_key=st.secrets["GROQ_API_KEY"])
+api_key = os.getenv("GROQ_API_KEY")
+client = Groq(api_key=api_key)
+
 
 # -----------------------------
 # Professional Header
