@@ -6,16 +6,12 @@ import duckdb
 import os
 
 
-
-#load Groq llm
-#client = Groq(api_key=st.secrets["GROQ_API_KEY"])
+#load Groq llm and api key from streamlabs secret env
 api_key = os.getenv("GROQ_API_KEY")
 client = Groq(api_key=api_key)
 
 
-# -----------------------------
-# Professional Header
-# -----------------------------
+#Markdown styling for the header
 st.markdown("""
 <div style='background-color:#1f4e79; padding:18px; border-radius:6px; margin-bottom:20px;'>
     <h1 style='color:white; text-align:center; margin:0;'>AI Analytics Query Tool</h1>
@@ -47,9 +43,7 @@ schema_summary = "\n".join(schema_summary)
 
 st.success("Dataset successfully loaded.")
 
-# -----------------------------
-# About Section
-# -----------------------------
+#Markdown styling for the info section
 st.markdown("""
 ### About This Tool
 <div style='background-color:#f5f7fa; padding:15px; border-radius:8px; line-height:1.6;'>
@@ -62,9 +56,7 @@ The model generates a SQL query, which is executed against the dataset to comput
 </div>
 """, unsafe_allow_html=True)
 
-# -----------------------------
-# Example Questions Box
-# -----------------------------
+#markdown styling for the examples
 st.markdown("""
 ### Example Questions
 <div style='background-color:#eef2f7; padding:15px; border-radius:8px;'>
